@@ -1,19 +1,32 @@
 {
-  "name": "netlify-env",
-  "version": "0.0.4",
+  "name": "netlify-env2",
+  "version": "1.0.0",
   "description": "Easily access netlify environment information",
-  "homepage": "https://github.com/andrewda/netlify-env#readme",
+  "homepage": "https://github.com/bluelovers/netlify-env#readme",
   "bugs": {
-    "url": "https://github.com/andrewda/netlify-env/issues"
+    "url": "https://github.com/bluelovers/netlify-env/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andrewda/netlify-env.git"
+    "url": "git+https://github.com/bluelovers/netlify-env.git"
   },
   "license": "MIT",
   "author": "Andrew Dassonville <dassonville.andrew@gmail.com>",
   "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@types/node": "*",
+    "ts-type": "^1.1.3"
+  },
+  "devDependencies": {
+    "@bluelovers/tsconfig": "^1.0.0"
+  },
+  "optionalDependencies": {
+    "@types/node": "*"
   }
 }

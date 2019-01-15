@@ -1,0 +1,8 @@
+{
+  "extends": "@bluelovers/tsconfig",
+  "compilerOptions": {
+    "inlineSourceMap": false,
+    "inlineSources": true,
+    "removeComments": false
+  }
+}
