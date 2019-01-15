@@ -1,6 +1,6 @@
 {
   "name": "netlify-env2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easily access netlify environment information",
   "homepage": "https://github.com/bluelovers/netlify-env#readme",
   "bugs": {
