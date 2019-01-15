@@ -132,8 +132,7 @@ export function getNetlifyEnv<T extends IProcessEnv>(processEnv: T | INetlifyEnv
 {
 	if (typeof processEnv === 'boolean')
 	{
-		returnProcessEnv = !!processEnv;
-		processEnv = process.env as INetlifyEnv<T>
+		[returnProcessEnv, processEnv] = [!!processEnv, process.env as INetlifyEnv<T>];
 	}
 	else if (typeof processEnv === 'undefined')
 	{
@@ -143,7 +142,7 @@ export function getNetlifyEnv<T extends IProcessEnv>(processEnv: T | INetlifyEnv
 	if (returnProcessEnv)
 	{
 		return processEnv = {
-			...process.env,
+			...processEnv,
 		} as INetlifyEnv<T>
 	}
 
@@ -225,14 +224,17 @@ export function parseNetlifyEnv<T extends IProcessEnv>(processEnv?: T | INetlify
 	// @ts-ignore
 	let env = getNetlifyEnv(processEnv, true) as INetlifyEnvParsed<INetlifyEnvSource>;
 
-	try
+	if (env.INCOMING_HOOK_BODY)
 	{
-		env.INCOMING_HOOK_BODY_JSON = JSON.parse(env.INCOMING_HOOK_BODY) || {};
-	}
-	catch (e)
-	{
-		env.INCOMING_HOOK_BODY_JSON = {};
-		console.warn((e as Error).message);
+		try
+		{
+			env.INCOMING_HOOK_BODY_JSON = JSON.parse(env.INCOMING_HOOK_BODY) || {};
+		}
+		catch (e)
+		{
+			env.INCOMING_HOOK_BODY_JSON = {};
+			console.warn((e as Error).message);
+		}
 	}
 
 	return env;
