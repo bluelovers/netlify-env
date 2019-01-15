@@ -19,8 +19,11 @@ exports.netlifyEnvKeys = [
     'WEBHOOK_BODY',
 ];
 function getNetlifyEnv(processEnv = process.env, returnProcessEnv) {
-    if (typeof processEnv === 'boolean' || typeof processEnv === 'undefined') {
+    if (typeof processEnv === 'boolean') {
         returnProcessEnv = !!processEnv;
+        processEnv = process.env;
+    }
+    else if (typeof processEnv === 'undefined') {
         processEnv = process.env;
     }
     if (returnProcessEnv) {

@@ -130,9 +130,13 @@ export function getNetlifyEnv(): INetlifyEnvSource
 export function getNetlifyEnv(returnProcessEnv?: boolean): INetlifyEnv<IProcessEnv> | INetlifyEnvSource
 export function getNetlifyEnv<T extends IProcessEnv>(processEnv: T | INetlifyEnv<T> | boolean = process.env as T, returnProcessEnv?: boolean)
 {
-	if (typeof processEnv === 'boolean' || typeof processEnv === 'undefined')
+	if (typeof processEnv === 'boolean')
 	{
 		returnProcessEnv = !!processEnv;
+		processEnv = process.env as INetlifyEnv<T>
+	}
+	else if (typeof processEnv === 'undefined')
+	{
 		processEnv = process.env as INetlifyEnv<T>
 	}
 
