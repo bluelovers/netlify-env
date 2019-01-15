@@ -2,8 +2,18 @@
   "name": "netlify-env",
   "version": "0.0.4",
   "description": "Easily access netlify environment information",
-  "main": "index.js",
-  "repository": "https://github.com/andrewda/netlify-env",
+  "homepage": "https://github.com/andrewda/netlify-env#readme",
+  "bugs": {
+    "url": "https://github.com/andrewda/netlify-env/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewda/netlify-env.git"
+  },
+  "license": "MIT",
   "author": "Andrew Dassonville <dassonville.andrew@gmail.com>",
-  "license": "MIT"
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
