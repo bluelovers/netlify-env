@@ -1,6 +1,7 @@
 export declare enum EnumNetlifyHookBodyGiteeAction {
     MERGE = "merge",
-    CREATE = "create"
+    CREATE = "create",
+    UPDATE = "update"
 }
 export declare enum EnumNetlifyHookBodyGiteePullRequestStatus {
     MERGED = "merged",
