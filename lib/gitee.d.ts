@@ -1,3 +1,6 @@
+/**
+ * Created by user on 2019/1/15/015.
+ */
 export declare enum EnumNetlifyHookBodyGiteeAction {
     MERGE = "merge",
     CREATE = "create",
@@ -8,7 +11,8 @@ export declare enum EnumNetlifyHookBodyGiteePullRequestStatus {
     OPEN = "open"
 }
 export declare enum EnumNetlifyHookBodyGiteeMergeStatus {
-    CAN_BE_MERGED = "can_be_merged"
+    CAN_BE_MERGED = "can_be_merged",
+    CANNOT_BE_MERGED = "cannot_be_merged"
 }
 export declare enum EnumNetlifyHookBodyGiteeHookName {
     MERGE_REQUEST_HOOKS = "merge_request_hooks"

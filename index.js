@@ -92,4 +92,3 @@ function parseNetlifyEnv(processEnv) {
 }
 exports.parseNetlifyEnv = parseNetlifyEnv;
 exports.default = getNetlifyEnv;
-//# sourceMappingURL=index.js.map

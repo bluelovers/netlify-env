@@ -18,6 +18,7 @@ export enum EnumNetlifyHookBodyGiteePullRequestStatus
 export enum EnumNetlifyHookBodyGiteeMergeStatus
 {
 	CAN_BE_MERGED = 'can_be_merged',
+	CANNOT_BE_MERGED = 'cannot_be_merged',
 }
 
 export enum EnumNetlifyHookBodyGiteeHookName
